@@ -1,0 +1,122 @@
+{
+  "tracking": {
+    "mode": "local",
+    "experiment": "Assignment3-PartC-MNIST-SMOKE-ONLY",
+    "tracking_uri": "sqlite:///C:/Users/Faizan Rahman/OneDrive/Documents/ChatGPT/Tracking a Deep Learning Experiment with MLflow and DagsHub/.tracking/mlflow.db"
+  },
+  "smoke_test": true,
+  "seed": 42,
+  "python": "3.11.9",
+  "versions": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "mlflow": "3.17.1",
+    "numpy": "2.3.0",
+    "pandas": "2.3.0",
+    "matplotlib": "3.10.0"
+  },
+  "configurations": [
+    {
+      "name": "baseline_128_adam_b64",
+      "neurons": [
+        128
+      ],
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 50
+    },
+    {
+      "name": "experiment2_256_adam_b64",
+      "neurons": [
+        256
+      ],
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 50
+    },
+    {
+      "name": "experiment3_128_64_adam_b64",
+      "neurons": [
+        128,
+        64
+      ],
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 50
+    },
+    {
+      "name": "experiment4_128_sgd_b32",
+      "neurons": [
+        128
+      ],
+      "optimizer": "SGD",
+      "batch_size": 32,
+      "epochs": 50
+    }
+  ],
+  "selected_model": "experiment2_256_adam_b64",
+  "runs": [
+    {
+      "name": "baseline_128_adam_b64",
+      "run_id": "f7d4d2281d75427d970e8336192b9e47",
+      "training_accuracy": 0.4775390625,
+      "validation_accuracy": 0.69140625,
+      "training_loss": 1.7731163501739502,
+      "validation_loss": 1.259758710861206,
+      "hidden_layers": 1,
+      "neurons_per_layer": "[128]",
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 1,
+      "configured_epochs": 50,
+      "smoke_test": true
+    },
+    {
+      "name": "experiment2_256_adam_b64",
+      "run_id": "f66ab3d754704f309193dd3feb68351f",
+      "training_accuracy": 0.5263671875,
+      "validation_accuracy": 0.73828125,
+      "training_loss": 1.60715651512146,
+      "validation_loss": 1.0230629444122314,
+      "hidden_layers": 1,
+      "neurons_per_layer": "[256]",
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 1,
+      "configured_epochs": 50,
+      "smoke_test": true
+    },
+    {
+      "name": "experiment3_128_64_adam_b64",
+      "run_id": "b696318d3dd14c1493dd689a92161e7b",
+      "training_accuracy": 0.43359375,
+      "validation_accuracy": 0.69921875,
+      "training_loss": 1.886327862739563,
+      "validation_loss": 1.4258942604064941,
+      "hidden_layers": 2,
+      "neurons_per_layer": "[128, 64]",
+      "optimizer": "Adam",
+      "batch_size": 64,
+      "epochs": 1,
+      "configured_epochs": 50,
+      "smoke_test": true
+    },
+    {
+      "name": "experiment4_128_sgd_b32",
+      "run_id": "7bf7cf0cef1745fbbb041778f8c5f51a",
+      "training_accuracy": 0.1689453125,
+      "validation_accuracy": 0.37890625,
+      "training_loss": 2.204371452331543,
+      "validation_loss": 2.0137312412261963,
+      "hidden_layers": 1,
+      "neurons_per_layer": "[128]",
+      "optimizer": "SGD",
+      "batch_size": 32,
+      "epochs": 1,
+      "configured_epochs": 50,
+      "smoke_test": true
+    }
+  ],
+  "selection": "final validation accuracy descending; final validation loss ascending",
+  "test_result": null
+}

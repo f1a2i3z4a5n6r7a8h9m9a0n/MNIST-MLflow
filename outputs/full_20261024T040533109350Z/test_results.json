@@ -1,0 +1,7 @@
+{
+  "selected_model": "experiment2_256_adam_b64",
+  "test_loss": 0.10869674384593964,
+  "test_accuracy": 0.9836000204086304,
+  "test_size": 10000,
+  "run_id": "0ff50081fd0d40e0b35f35cf41658e11"
+}
